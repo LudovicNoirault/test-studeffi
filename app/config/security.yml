@@ -24,7 +24,7 @@ security:
 
             logout: true
             anonymous: true
-            access_denied_handler: AppBundle\Security\AccessDeniedhandler
+            logout_on_user_change: true
         
     access_control:
         - {path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY}

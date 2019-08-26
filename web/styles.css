@@ -59,12 +59,18 @@ body{
     height: 100%;
 }
 
+#compteur_enregistrer, #compteur_verification{
+    padding:1% 5%;
+    font-size:1.8rem;
+    text-transform: uppercase
+}
+
 /* ---------------------- Header --------------------- */
 
 #header{
     background: #4d4d4d;
     color:#ccc;
-    height: 5%;
+    height: 5rem;
     display:flex;
     justify-content: space-evenly;
     align-items: center;
@@ -80,7 +86,7 @@ body{
 #content{
     background: #fdfdfd;
     color:#2f2f2f;
-    height:85%;
+    height:calc(100vh - 12rem);
     padding: 0% 5%;
 }
 
@@ -89,7 +95,55 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding:0% 10%;
+    padding:10% 10%;
+}
+
+#content .container h2{
+    font-size:2rem;
+}
+
+#content .container a, #content .container p{
+    font-size:1.5rem;
+}
+
+.container .home{
+    background:#fdfdfd;
+    padding:5% 10%;
+    border:1px solid #2f2f2f;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container .security{
+    background:#fdfdfd;
+    padding:5% 25%;
+    border:1px solid #2f2f2f;
+}
+
+.container .security .field{
+    display:flex;
+    font-size:2rem;
+    justify-content: space-between;
+    padding:10px 0;
+}
+
+.container .security #_submit{
+    width: 100%;
+    font-size: 1.5rem;
+    height: 3rem;
+}
+
+#fos_user_registration_form div{
+    display:flex;
+    font-size:1.8rem;
+    justify-content: space-between;
+    padding:10px 0;
+}
+#submit  {
+    width: 100%;
+    font-size: 1.5rem;
+    height: 3rem;
 }
 
 /* Create page */
@@ -139,12 +193,6 @@ body{
     padding-left:1rem;
 }
 
-#create #compteur_enregistrer{
-    padding:1% 5%;
-    font-size:1.8rem;
-    text-transform: uppercase
-}
-
 /* List page */
 
 #list{
@@ -169,18 +217,19 @@ body{
 }
 
 #list .body{
-    height: 85%;
     background: #ccc;
     width: 100%;
     border: #2f2f2f 1px;
     color:#2f2f2f;
+    max-height:85%;
+    border-radius:5%;
 }
 
 #list .body thead{
     background: green;
     color:#fdfdfd;
     font-size:1.7rem;
-    height: 10%;
+    height: 4rem;
 }
 
 #list .body thead tr{
@@ -189,17 +238,17 @@ body{
 
 #list .body tbody{
     height: 90%;
-    overflow:scroll;
+    overflow:auto;
     font-size:1.3rem;
 }
 
-#list .body tbody tr{
-
-    height:25px;
+#list .body tbody .ligne{
+    width: 100%;
+    height:3rem;
     white-space: nowrap
 }
 
-#list .body tbody td{
+#list .body tbody .cellule{
     height: 100%;
 }
 
@@ -294,22 +343,16 @@ body{
     padding-left:1rem;
 }
 
-#update #compteur_enregistrer{
-    padding:1% 5%;
-    font-size:1.8rem;
-    text-transform: uppercase
-}
-
 /* ------------------------- Footer ------------------------ */
 
 #footer{
+    height:7rem;
     color: #fdfdfd;
     text-align: center;
     padding: 0 5%;
     background: #2f2f2f;
     display: flex;
     flex-direction: column;
-    height:10%;
     font-size:2rem;
 }
 

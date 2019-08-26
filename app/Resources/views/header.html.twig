@@ -2,11 +2,11 @@
     <a href="{{path('create')}}">Ajouter un compteur</a>
     <a href="{{path('list')}}">Liste des compteurs</a>
     {% if app.user %}
-        <a href="/logout">
+        <a href="{{path('fos_user_security_logout')}}">
             <i class="fas fa-sign-out-alt"> Déconnexion</i>
         </a>
     {% else %}
-        <a href="/login">
+        <a href="{{path('fos_user_security_login')}}">
             <i class="fas fa-sign-in-alt"> Connexion</i>
         </a>
     {% endif %}

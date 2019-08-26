@@ -3,10 +3,11 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\ButtonType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class CompteurType extends AbstractType
@@ -20,6 +21,7 @@ class CompteurType extends AbstractType
             ->add('codePostal', IntegerType::class)
             ->add('ville', TextType::class)
             ->add('codeInsee', HiddenType::class)
+            ->add('verification', ButtonType::class)
             ->add('enregistrer', SubmitType::class, [
                 'disabled' => 'true',
             ]);

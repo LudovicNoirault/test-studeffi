@@ -12,14 +12,3 @@
     </div>
 
 {% endblock %}
-
-{% block javascripts %}
-    <script>
-        $("#compteur_codePostal").change(function(){
-            setTimeout(function(){
-                $codePostal = $("#compteur_codePostal").val();
-                fetchInsee($codePostal);
-            }, 1000);
-        });
-    </script>
-{% endblock %}
