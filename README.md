@@ -24,11 +24,14 @@ Votre machine doit posséder les logiciels suivants :
 ### Étapes à exécuter :
 
 - Ouvrir un terminal à l'endroit où l'on souhaite travailler
+
 - Cloner le projet depuis git via la commande suivante
+
 - si machine paramétrée avec shh
   ```cmd
   git clone git@github.com:LudovicNoirault/test-studeffi.git
   ```
+
 - sinon
   ```cmd
   git clone https://github.com/LudovicNoirault/test-studeffi.git
@@ -38,21 +41,22 @@ Votre machine doit posséder les logiciels suivants :
   ```cmd
   cd test-studeffi
   ```
+
 - Lancer la commande suivante pour initialiser le projet
   ```cmd
   composer install
   ```
 
 - Le terminal va vous demander d'entrer des informations suivantes, les paramètres sont à modifier en fonctions de votre système:
-- database_host : 127.0.0.1
-- database_port : 3306
-- database_name : test-studeffi
-- database_user : {{ votre utilisateur mysql }}
-- database_password : {{ votre mot de passe mysql }}
-- mailer_transport : smtp
-- mailer_user : notImplemented
-- mailer_password : notImplented
-- secret : {{ Clé secrete a votre convenance, niveau de sécurisation non démandé dans le cahier des charges }}
+    - database_host : 127.0.0.1
+    - database_port : 3306
+    - database_name : test-studeffi
+    - database_user : {{ votre utilisateur mysql }}
+    - database_password : {{ votre mot de passe mysql }}
+    - mailer_transport : smtp
+    - mailer_user : notImplemented
+    - mailer_password : notImplented
+    - secret : {{ Clé secrete a votre convenance, niveau de sécurisation non démandé dans le cahier des charges }}
 
 - Lancer la création de la base de donner via la commande
   ```cmd
