@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block page %}single{% endblock %}
+
+{% block content %}
+    <div class="head">
+        <h2>Compteur n°{{compteur.id}}, {{compteur.nom}}</h2>
+        <a href="{{path('update', {id:compteur.id} ) }}">Modifier</a>
+    </div>
+    <div class="body">
+        <ul>
+            <li>Numéro de voie : {{compteur.numeroVoie}}</li>
+            <li>Nom de voie : {{compteur.nomVoie}}</li>
+            <li>Code postal : {{compteur.codePostal}}</li>
+            <li>Ville : {{compteur.ville}}</li>
+            <li>Insee : {{compteur.codeInsee}}</li>
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+<header id="header">
+    <a href="{{path('create')}}">Ajouter un compteur</a>
+    <a href="{{path('list')}}">Liste des compteurs</a>
+    {% if app.user %}
+        <a href="/logout">
+            <i class="fas fa-sign-out-alt"> Déconnexion</i>
+        </a>
+    {% else %}
+        <a href="/login">
+            <i class="fas fa-sign-in-alt"> Connexion</i>
+        </a>
+    {% endif %}
+</header>

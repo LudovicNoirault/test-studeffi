@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block page %}create{% endblock %}
+
+{% block content %}
+
+    <div class="head">
+        <h2>Ajout de compteur</h2>
+    </div>
+    <div class="body">
+        {{form(form)}}
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $("#compteur_codePostal").change(function(){
+            setTimeout(function(){
+                $codePostal = $("#compteur_codePostal").val();
+                fetchInsee($codePostal);
+            }, 1000);
+        });
+    </script>
+{% endblock %}

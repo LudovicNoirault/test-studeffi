@@ -1,0 +1,321 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom CSS */
+
+/* --------------------- General --------------------- */
+
+html {
+    height: 100vh;
+}
+
+body{
+    height: 100%;
+}
+
+/* ---------------------- Header --------------------- */
+
+#header{
+    background: #4d4d4d;
+    color:#ccc;
+    height: 5%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 10%;
+}
+
+#header a{
+    color:#fdfdfd   ;
+}
+
+/* ------------------------ Middle of page ------------------ */
+
+#content{
+    background: #fdfdfd;
+    color:#2f2f2f;
+    height:85%;
+    padding: 0% 5%;
+}
+
+#content .container{
+    background:#fdfdfd;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding:0% 10%;
+}
+
+/* Create page */
+
+#create{
+    height: 95%;
+    text-align: start;
+}
+
+#create .head{
+    display:flex;
+    justify-content: space-evenly;
+    padding:5% 10%;
+    font-size:2rem;
+}
+
+#create .body{
+    border:1px #2f2f2f solid;
+    font-size:1.5rem;
+    text-align: start;
+    height: 75%;
+}
+
+#create form{
+    height: 100%;
+}
+
+#create #compteur{
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#create #compteur>div{
+    display:flex;
+    justify-content: space-around;
+}
+
+#create #compteur>div>label{
+    width:25%;
+}
+
+#create #compteur>div>input{
+    width:50%;
+    height: 2rem;
+    padding-left:1rem;
+}
+
+#create #compteur_enregistrer{
+    padding:1% 5%;
+    font-size:1.8rem;
+    text-transform: uppercase
+}
+
+/* List page */
+
+#list{
+    height: 95%;
+}
+
+#list .head{
+    padding:2% 10%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+}
+
+#list .head h2{
+    font-size:2.5rem;
+}
+
+#list .head a{
+    color: green;
+    font-size:2rem;
+}
+
+#list .body{
+    height: 85%;
+    background: #ccc;
+    width: 100%;
+    border: #2f2f2f 1px;
+    color:#2f2f2f;
+}
+
+#list .body thead{
+    background: green;
+    color:#fdfdfd;
+    font-size:1.7rem;
+    height: 10%;
+}
+
+#list .body thead tr{
+    align-content: space-around;
+}
+
+#list .body tbody{
+    height: 90%;
+    overflow:scroll;
+    font-size:1.3rem;
+}
+
+#list .body tbody tr{
+
+    height:25px;
+    white-space: nowrap
+}
+
+#list .body tbody td{
+    height: 100%;
+}
+
+#list .body  th, #list .body td{
+    vertical-align: middle;
+}
+
+#list .body tbody tr:nth-child(odd){
+    background: #2f2f2f;
+    color: #fdfdfd;
+}
+
+#list .body .actions{
+    border-right:none;
+}
+
+#list .body .actions a i{
+    color:#fdfdfd;
+    padding: 0 5%;
+    display: inline-block;
+}
+
+/* Single page */
+
+#single{
+    height: 95%;
+    text-align: start;
+}
+
+#single .head{
+    display:flex;
+    justify-content: space-evenly;
+    padding:5% 10%;
+    font-size:2rem;
+}
+
+#single .body{
+    border:1px #2f2f2f solid;
+    padding:5%;
+    font-size:1.5rem;
+    text-align: start;
+}
+
+#single .body ul li{
+    padding:2%;
+}
+
+/* Update page */
+
+#update{
+    height: 95%;
+    text-align: start;
+}
+
+#update .head{
+    display:flex;
+    justify-content: space-evenly;
+    padding:5% 10%;
+    font-size:2rem;
+}
+
+#update .body{
+    border:1px #2f2f2f solid;
+    font-size:1.5rem;
+    text-align: start;
+    height: 75%;
+}
+
+#update form{
+    height: 100%;
+}
+
+#update #compteur{
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#update #compteur>div{
+    display:flex;
+    justify-content: space-around;
+}
+
+#update #compteur>div>label{
+    width:25%;
+}
+
+#update #compteur>div>input{
+    width:50%;
+    height: 2rem;
+    padding-left:1rem;
+}
+
+#update #compteur_enregistrer{
+    padding:1% 5%;
+    font-size:1.8rem;
+    text-transform: uppercase
+}
+
+/* ------------------------- Footer ------------------------ */
+
+#footer{
+    color: #fdfdfd;
+    text-align: center;
+    padding: 0 5%;
+    background: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    height:10%;
+    font-size:2rem;
+}
+
+
+#footer .parties{
+    font-size:1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}

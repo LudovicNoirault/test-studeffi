@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}CRUD Energie{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('styles.css') }}" />
+    </head>
+    <body>
+        {% include "header.html.twig" %}
+        
+        <section id="content">
+            <div class="container" id="{% block page %}{% endblock %}">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </section>
+        
+        {% include "footer.html.twig" %}
+
+        <script src="https://kit.fontawesome.com/836a7b817f.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="{{ asset('script.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block page %}home{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Bienvenue</h2>
+    {% if not app.user %}
+        <p>L'utilisation de cette application nécéssite la création d'un compte.</p>
+        <a href="/register"> Cliquer ici pour commencer la création de celui ci.</a>
+        <a href="/login"> Appuyer ici pour vous connectez.</a>
+    {% else %}
+        <a href="{{path("create")}}">
+            <button>Ajouter un compteur</button>
+        </a>
+        <a href="{{path("list")}}">
+            <button>Voir les compteurs</button>
+        </a>
+    {% endif %}
+</div>
+
+{% endblock %}
