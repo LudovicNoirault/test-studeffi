@@ -65,6 +65,11 @@ body{
     text-transform: uppercase
 }
 
+#compteur_enregistrer:enabled{
+    background: green;
+    color:#fdfdfd;
+}
+
 /* ---------------------- Header --------------------- */
 
 #header{
@@ -95,7 +100,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding:10% 10%;
+    padding:0% 10%;
 }
 
 #content .container h2{
@@ -108,16 +113,17 @@ body{
 
 .container .home{
     background:#fdfdfd;
-    padding:5% 10%;
+    padding:15% 10%;
     border:1px solid #2f2f2f;
     display: flex;
     flex-direction: column;
-
+    margin:10% 0;
 }
 
 .container .security{
     background:#fdfdfd;
-    padding:5% 25%;
+    padding:15% 25%;
+    margin:10% 0;
     border:1px solid #2f2f2f;
 }
 
@@ -140,7 +146,7 @@ body{
     justify-content: space-between;
     padding:10px 0;
 }
-#submit  {
+#submit, .action  {
     width: 100%;
     font-size: 1.5rem;
     height: 3rem;
@@ -222,7 +228,6 @@ body{
     border: #2f2f2f 1px;
     color:#2f2f2f;
     max-height:85%;
-    border-radius:5%;
 }
 
 #list .body thead{
@@ -248,8 +253,9 @@ body{
     white-space: nowrap
 }
 
-#list .body tbody .cellule{
+#list .body tbody .cellule, th{
     height: 100%;
+    padding:5px;
 }
 
 #list .body  th, #list .body td{
@@ -267,7 +273,6 @@ body{
 
 #list .body .actions a i{
     color:#fdfdfd;
-    padding: 0 5%;
     display: inline-block;
 }
 
