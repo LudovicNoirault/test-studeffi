@@ -11,6 +11,16 @@ Sujet : Réalisation d’une application CRUD (Create, Read, Update, Delete) per
 
 ## Acceder au projet :
 
+### Logiciel requis :
+
+Votre machine doit être configurer avec les logicels suivants :
+
+- Git (Installable à l'adresse suivante : )
+- Wamp (Installable à l'adresse suivante : )
+- Composer (Installable à l'adresse suivante : )
+
+### Etapes à executer :
+
 - Cloner le projet depuis git via la commande suivante 
   - si machine paramétrée avec shh
   ```cmd 

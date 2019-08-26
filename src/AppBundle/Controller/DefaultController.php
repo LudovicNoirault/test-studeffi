@@ -25,6 +25,9 @@ class DefaultController extends AbstractController
      */
     public function createAction(Request $request)
     {
+
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Vous devez être connecter pour accéder a cette page.');
+
         $compteur = new Compteur();
 
         $form = $this->createForm(CompteurType::class, $compteur);
@@ -50,6 +53,8 @@ class DefaultController extends AbstractController
      */
     public function listAction(Request $request)
     {
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Vous devez être connecter pour accéder a cette page.');
+
         $listeCompteurs = $this->getDoctrine()->getRepository(Compteur::class)->findAll();
 
         return $this->render('default/list.html.twig', ['compteurs'=>$listeCompteurs]);
@@ -60,6 +65,9 @@ class DefaultController extends AbstractController
      */
     public function readAction(Request $request, $id)
     {
+
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Vous devez être connecter pour accéder a cette page.');
+
         $compteur = $this->getDoctrine()->getRepository(Compteur::class)->find($id);
         return $this->render('default/single.html.twig', ['compteur'=>$compteur]);
     }
@@ -69,6 +77,9 @@ class DefaultController extends AbstractController
      */
     public function updateAction(Request $request, $id)
     {
+
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Vous devez être connecter pour accéder a cette page.');
+
         $compteur = $this->getDoctrine()->getRepository(Compteur::class)->find($id);
 
         $form = $this->createForm(CompteurType::class, $compteur);
@@ -95,6 +106,9 @@ class DefaultController extends AbstractController
      */
     public function deleteAction(Request $request, $id)
     {
+
+        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Vous devez être connecter pour accéder a cette page.');
+
         $compteur = $this->getDoctrine()->getRepository(Compteur::class)->find($id);
 
         $entityManager = $this->getDoctrine()->getManager();
